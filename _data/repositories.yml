@@ -1,12 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - rajammanabrolu
+  - pearls-lab
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - allenai/scienceworld
+  - allenai/RL4LMs
+  - allenai/FineGrainedRLHF
+  - mosaicml/llm-foundry
+  - mosaicml/composer
+
