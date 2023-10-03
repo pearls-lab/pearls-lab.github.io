@@ -8,3 +8,5 @@ services:
       - 8080:8080
     volumes:
       - .:/srv/jekyll
+    command: jekyll serve --incremental --livereload --force_polling
+
