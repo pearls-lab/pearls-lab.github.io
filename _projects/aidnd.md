@@ -2,7 +2,7 @@
 layout: page
 title: Dungeons and Dragons AI
 description: Multi-user, situated, collaborative dialogue agents
-img: assets/img/1.jpg
+img:
 importance: 3
 category: Human AI Collab
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: LLMs as World Models
 description: a project that redirects to another website
-img: assets/img/7.jpg
+img:
 importance: 3
 category: Situated & Embodied Agents
 ---

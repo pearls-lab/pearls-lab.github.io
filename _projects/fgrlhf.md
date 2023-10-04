@@ -2,7 +2,7 @@
 layout: page
 title: Fine-grained Feedback
 description: How to build better proxy models of human preferences?
-img: assets/img/3.jpg
+img:
 importance: 2
 category: Human Preference Alignment
 giscus_comments: false

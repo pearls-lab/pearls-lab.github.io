@@ -2,7 +2,7 @@
 layout: page
 title: Interactive Narratives
 description: Teach agents to operate in complex text-based simulations
-img: assets/img/7.jpg
+img:
 importance: 3
 category: Situated & Embodied Agents
 ---
