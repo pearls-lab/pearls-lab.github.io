@@ -4,7 +4,7 @@ title: Social Value Alignment
 description: Aligning AI agents to social commonsense norms and values.
 img: 
 importance: 1
-category: Preference Alignment
+category: Human Preference Alignment
 related_publications: martin2018event, martin2017improvisational
 ---
 
