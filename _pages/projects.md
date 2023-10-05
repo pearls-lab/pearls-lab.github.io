@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A broad overview of PEARLS Lab Projects.
+description: A broad overview of current PEARLS Lab Projects.
 nav: true
 nav_order: 2
 display_categories: [ Human Preference Alignment, Situated & Embodied Agents , Human AI Collab ]

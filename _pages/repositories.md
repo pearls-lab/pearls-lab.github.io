@@ -2,7 +2,7 @@
 layout: page
 permalink: /repos/
 title: Repos
-description: Examples of the kind of open source software that we have aided in and will keep aiding in.
+description: Examples of the kind of open source software that we are currently aiding in developing.
 nav: true
 nav_order: 3
 ---
