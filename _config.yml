@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: PEARLS Lab @ UCSD CSE # the website title (if blank, full name will be used instead)
-#first_name: PEARLS
+title: PEARLS Lab @ UCSD # the website title (if blank, full name will be used instead)
+first_name: PEARLS
 #middle_name: R.
-#last_name: Lab @ UCSD
+last_name: Lab @ UCSD
 email: prithvi@ucsd.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
  Lab website for the PEARLS lab @ University of California, San Diego CSE
