@@ -4,7 +4,7 @@ title: Explainable RL Agents
 description: RL agents that can explain their actions
 img: assets/img/xaiagent.png
 importance: 3
-category: Situated & Embodied Agents
+category: World Modeling Embodied Agents
 related_publications: peng2022inherent
 ---
 

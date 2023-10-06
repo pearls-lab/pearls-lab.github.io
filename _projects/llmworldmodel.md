@@ -4,7 +4,7 @@ title: World Modeling with Language
 description: Improving the ability of LLMs to act as world models that can help AI agents plan and execute goals.
 img: assets/img/scienceworld.png
 importance: 3
-category: Situated & Embodied Agents
+category: World Modeling Embodied Agents
 related_publications: ammanabrolu2021modeling, ammanabrolu2021learning, wang2022scienceworld, Nottingham2023Embodied, lin2023swiftsage
 ---
 

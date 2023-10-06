@@ -4,7 +4,7 @@ title: Interactive Narratives
 description: Teach agents to operate in complex text-based simulations
 img: assets/img/zork.jpg
 importance: 3
-category: Situated & Embodied Agents
+category: World Modeling Embodied Agents
 related_publications: ammanabrolu2021situated, ammanabrolu2019playing, hausknecht2020interactive, ammanabrolu2020graph, ammanabrolu2020avoid
 ---
 

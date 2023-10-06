@@ -4,7 +4,7 @@ title: Tool Use
 description: Teach AI agents to more effectively use existing tools and APIs.
 img: assets/img/tooluse.png
 importance: 3
-category: Situated & Embodied Agents
+category: World Modeling Embodied Agents
 related_publications: wang2022behavior, Nottingham2023Embodied, lin2023swiftsage
 ---
 

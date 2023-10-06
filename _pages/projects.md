@@ -5,7 +5,7 @@ permalink: /projects/
 description: A broad overview of current PEARLS Lab Projects.
 nav: true
 nav_order: 2
-display_categories: [ Human Preference Alignment, Situated & Embodied Agents , Human AI Collab ]
+display_categories: [ World Modeling Embodied Agents, Human Preference Alignment , Human AI Collab ]
 horizontal: false
 ---
 
