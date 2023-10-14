@@ -2,7 +2,7 @@
 layout: page
 title: Automated Storytelling
 description: Storytelling with an AI
-img: assets/img/aistory.jpg
+img: assets/img/aistory2.jpg
 importance: 3
 category: Human AI Collab
 related_publications: martin2017improvisational, martin2018event, ammanabrolu20story, ammanabrolu2020automated
