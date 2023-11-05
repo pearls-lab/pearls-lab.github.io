@@ -12,7 +12,7 @@ profiles:
   - align: right
     image: raj3.jpg
     content: about_raj.md
-    image_circular: true # crops the image to make it circular
+    image_circular: false # crops the image to make it circular
     more_info: >
       <p>CSE 4134, 3235 Voigt Dr</p>
       <p>La Jolla, CA 92093</p>

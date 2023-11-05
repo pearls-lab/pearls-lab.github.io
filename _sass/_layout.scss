@@ -6,9 +6,20 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  font-family: 'Courier New', Courier, monospace;
+  //'typeface-mario-world-pixel-font';
+  // src: url('assets/fonts/typeface-mario-world-pixel-font/TypefaceMarioWorldPixelFilledRegular-rgVMx.ttf') format('ttf') ,
+  //      url('assets/fonts/typeface-mario-world-pixel-font/TypefaceMarioWorldPixelFilledRegular-rgVMx.otf') format('otf') ;
 
   h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: 66px;
+    font-family: 'Press Start 2P';
+    font-weight: lighter;
+    font-style: normal;
+    src: url('assets/fonts/Press-Start-2P/regular.woff2') format('woff2'),
+        url('assets/fonts/Press-Start-2P/regular.woff') format('woff'),
+        url('assets/fonts/Press-Start-2P/regular.ttf') format('ttf')
+
   }
 }
 

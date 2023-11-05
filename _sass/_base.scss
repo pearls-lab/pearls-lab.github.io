@@ -19,6 +19,23 @@ strong {
   color: var(--global-text-color);
 }
 
+@font-face {
+  font-family: 'Press Start 2P';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/assets/fonts/Press-Start-2P/regular.woff2') format('woff2'),
+       url('/assets/fonts/Press-Start-2P/regular.woff') format('woff'),
+       url('/assets/fonts/Press-Start-2P/regular.ttf') format('ttf')
+}
+
+// @font-face {
+//   font-family: 'typeface-mario-world-pixel-font';
+//   font-weight: normal;
+//   font-style: normal;
+//   src: url('/assets/fonts/typeface-mario-world-pixel-font/TypefaceMarioWorldPixelFilledRegular-rgVMx.ttf') format('ttf') ,
+//        url('/assets/fonts/typeface-mario-world-pixel-font/TypefaceMarioWorldPixelFilledRegular-rgVMx.otf') format('otf') ;
+// }
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -95,6 +112,7 @@ blockquote {
 
   .card-title {
     color: var(--global-text-color);
+    font-size: 1.1rem;
   }
 
   .card-item {
@@ -123,7 +141,7 @@ blockquote {
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
 
     p {
       display: inline-block;
