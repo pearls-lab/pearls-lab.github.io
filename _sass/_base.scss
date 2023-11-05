@@ -160,8 +160,8 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
-
+    width: 35%;
+    background-color: var(--global-bg-color);
     .address {
       p {
         display: block;
@@ -437,7 +437,7 @@ footer.sticky-bottom {
 
 @media (min-width: 768px) {
   .repo {
-    max-width: 50%;
+    max-width: 30%;
   }
 }
 

@@ -8,4 +8,6 @@ github_repos:
   - allenai/FineGrainedRLHF
   - mosaicml/llm-foundry
   - mosaicml/composer
-
+  - facebookresearch/ParlAI
+  - microsoft/jericho
+  - microsoft/textworld

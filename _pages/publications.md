@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /publications/
-title: Publications
+permalink: /pubs/
+title: Pubs
 description: PEARLS Lab Publications.
 nav: true
 nav_order: 1
