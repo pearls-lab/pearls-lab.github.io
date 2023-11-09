@@ -1,1 +1,0 @@
-You can find a list of non-UCSD affiliated members of the lab [here](http://prithvirajva.com/mentees.html)
