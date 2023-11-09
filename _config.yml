@@ -11,7 +11,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
  Lab website for the PEARLS lab @ University of California, San Diego CSE
 footer_text: >
   Yes, we like bubble tea.
-  Logo Credits: ____
+  Logo Credits: Youna Hoshi.
 keywords: academic-website, ai-lab, ucsd, nlp, reinforcement-learning  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
