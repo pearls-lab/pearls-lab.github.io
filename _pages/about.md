@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://cse.ucsd.edu/'>UCSD, Department of Computer Science and Engineering</a>. 
+subtitle: <a href='https://cse.ucsd.edu/'>UCSD, Department of Computer Science and Engineering</a> and the <a href='https://ucsd-nlp.github.io'>UCSD NLP Group</a>. 
 
 profile:
   align: center
