@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://cse.ucsd.edu/'>UCSD, Department of Computer Science and Engineering</a> and the <a href='https://ucsd-nlp.github.io'>UCSD NLP Group</a>. PI - <a href='http://prithvirajva.com'>Assistant Professor Prithviraj (aka Prithvi or Raj) Ammamanabrolu</a>
+subtitle: <a href='https://cse.ucsd.edu/'>UCSD, Department of Computer Science and Engineering</a> and the <a href='https://ucsd-nlp.github.io'>UCSD NLP Group</a>. PI - <a href='https://prithvirajva.com'>Assistant Professor Prithviraj (aka Prithvi or Raj) Ammamanabrolu</a>
 
 profile:
   align: center
