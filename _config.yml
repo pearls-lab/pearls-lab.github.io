@@ -10,7 +10,7 @@ email: prithvi@ucsd.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
  Lab website for the PEARLS lab @ University of California, San Diego CSE
 footer_text: >
-  Yes, we like bubble (pearl) tea.
+  Yes, we like (pearl) tea.
   Logo Credits: Youna Hoshi.
 keywords: academic-website, ai-lab, ucsd, nlp, reinforcement-learning, ai, rl, games  # add your own keywords or leave empty
 
