@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Now recruiting PhD Students for the 2023-24 cycle. Please apply [online](https://cse.ucsd.edu/graduate/doctoral-programs-computer-science-and-engineering). More info for prospective students can be found [here](/join/).
+Now recruiting PhD Students for the 2023-24 cycle. Please apply [online](https://cse.ucsd.edu/graduate/admissions). More info for prospective students can be found [here](/join/).
