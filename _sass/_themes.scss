@@ -3,15 +3,15 @@
  ******************************************************************************/
 
 :root {
-  --global-bg-color: #{$pearl-color-light};
+  --global-bg-color: #{$pearl-color-top-1};
   --global-code-bg-color: #{$pearl-color-lighter};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
   --global-theme-color: #{$purple-color};
   --global-hover-color: #{$purple-color};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$pearl-color-light};
+  --global-footer-bg-color: #{$pearl-color-bottom-1};
+  --global-footer-text-color: #{$pearl-color-darker};
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(0,0,0,.1);
