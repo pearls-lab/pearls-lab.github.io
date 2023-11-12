@@ -2,15 +2,15 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://cse.ucsd.edu/'>UCSD, Department of Computer Science and Engineering</a> and the <a href='https://ucsd-nlp.github.io'>UCSD NLP Group</a>. PI - <a href='https://prithvirajva.com'>Assistant Professor Prithviraj (aka Prithvi or Raj) Ammamanabrolu</a>
+subtitle: <p><a href='https://cse.ucsd.edu/'>UCSD, Department of Computer Science and Engineering</a> and the <a href='https://ucsd-nlp.github.io'>UCSD NLP Group</a>.</p> <p>PI - <a href='https://prithvirajva.com'>Assistant Professor Prithviraj Ammamanabrolu</a></p>
 
 profile:
   align: center
   image: logo-2.png
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>CSE, 3235 Voigt Dr</p>
-    <p>La Jolla, CA 92093</p>
+  # more_info: >
+  #   <p>CSE, 3235 Voigt Dr</p>
+  #   <p>La Jolla, CA 92093</p>
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
