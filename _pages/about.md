@@ -6,7 +6,7 @@ subtitle: <p><a href='https://cse.ucsd.edu/'>UCSD, Department of Computer Scienc
 
 profile:
   align: center
-  image: logo-2.png
+  image: Logo-2.png
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>CSE, 3235 Voigt Dr</p>
