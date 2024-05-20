@@ -6,7 +6,9 @@ description: Info for prospective students
 nav: true
 nav_order: 5
 ---
-The lab is currently recruiting *only* PhD Students starting Fall 2024 to work on topics related our research interests, particularly students with a strong background in: reinforcement learning, natural language processing, machine learning, and general deep learning engineering.
+The lab is currently NOT recruiting anyone: interns, undergrads, master's, PhD students, etc. at his moment. This may change in the Fall/Winter Quarters. Please check back then.
+
+When positions are available we are interested in recruiting is select topics, particularly students with a strong background in: reinforcement learning, natural language processing, machine learning, and general deep learning engineering.
 
 Please mention "Prithviraj Ammanabrolu" as a potential PI on your [PhD application](https://cse.ucsd.edu/graduate/admissions) to UCSD CSE. 
 It is the only way to ensure that Raj will see your application.
