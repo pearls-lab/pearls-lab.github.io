@@ -6,7 +6,7 @@ description: Info for prospective students
 nav: true
 nav_order: 5
 ---
-The lab is currently NOT recruiting anyone: interns, undergrads, master's, PhD students, etc. at his moment. This may change in the Fall/Winter Quarters. Please check back then.
+The lab is currently NOT recruiting anyone: interns, undergrads, master's, PhD students, etc. at his moment. Please check back in the future for updates.
 
 When positions are available we are interested in recruiting is select topics, particularly students with a strong background in: reinforcement learning, natural language processing, machine learning, and general deep learning engineering.
 
