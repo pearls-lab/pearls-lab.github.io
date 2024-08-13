@@ -7,40 +7,33 @@ layout: page
 
         <article>
           {% if page.profiles -%}
-          {% for profile in page.profiles %}
-          <hr>
-          <div class="profile float-{%- if profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if profile.image %}
-              {%- assign profile_image_path = profile.image | prepend: 'assets/img/' -%}
+          <div class="container">
+            <h2 class="text-center mt-0">{{ section.title }}</h2>
+            <hr class="divider my-4">
+            <div class="row justify-content-center">
+              {% for profile in page.profiles %}
+              <div class="col-lg-4 col-md-3 text-center">
+                <div class="member-box">
+                  {%- assign profile_image_path = profile.image | prepend: 'assets/img/' -%}
 
-              {% if profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
+                  {% if profile.image_circular %}
+                    {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
+                  {% else %}
+                    {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
+                  {% endif %}
 
-              {% include figure.html
-              path=profile_image_path
-              class=profile_image_class
-              alt=profile.image -%}
-            {% endif -%}
-            {%- if profile.more_info %}
-            <div class="more-info float-center">
-              {{ profile.more_info }}
+                  {% include figure.html
+                  path=profile_image_path
+                  class=profile_image_class
+                  alt=profile.image -%}
+                  <!-- <img class=profile_image_class src="/assets/img/{{ profile.image }}" alt="{{ profile.image }}"> -->
+                  <h3 class="h5 mb-2"><a href="{{ profile.link }}">{{ profile.name }}</a></h3>
+                  <p class="text-black-50 mb-0">{{ profile.more_info }}</p>
+                </div>
+              </div>
+              {% endfor %}
             </div>
-            {%- endif %}
           </div>
-
-          <div class="clearfix">
-            {% if profile.content -%}
-            {% capture profile_content %}{%- include_relative {{ profile.content }} %}{% endcapture %}
-            {{ profile_content | markdownify }}
-            {%- else -%}
-            {{ content }}
-            {%- endif %}
-          </div>
-
-          {% endfor %}
           {%- endif %}
         </article>
 
