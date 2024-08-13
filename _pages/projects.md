@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 description: A broad overview of current PEARLS Lab Projects.
 nav: true
-nav_order: 2
+nav_order: 3
 display_categories: [ World Modeling Embodied Agents, Human Preference Alignment , Human AI Collab ]
 horizontal: false
 ---

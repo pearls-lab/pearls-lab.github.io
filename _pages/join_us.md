@@ -4,7 +4,7 @@ permalink: /join/
 title: Join
 description: Info for prospective students
 nav: true
-nav_order: 5
+nav_order: 6
 ---
 The lab is currently NOT recruiting anyone: interns, undergrads, master's, PhD students, etc. at his moment. Please check back in the future for updates.
 

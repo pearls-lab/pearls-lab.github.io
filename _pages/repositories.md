@@ -4,7 +4,7 @@ permalink: /repos/
 title: Repos
 description: Examples of the kinds of open source software that our collaborators are currently developing.
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 <!-- ## GitHub users
