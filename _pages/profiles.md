@@ -58,3 +58,9 @@ profiles:
   #   more_info: >
   #     Non-UCSD affiliated student collaborators
 ---
+
+<!-- {% include figure.html
+              path='/assets/img/spookylab.jpg'
+              style='max-width:20% height:auto'
+              alt='lab photo'
+              cache_bust=true -%} -->
