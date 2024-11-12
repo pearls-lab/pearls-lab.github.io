@@ -6,7 +6,7 @@ description: Info for prospective students
 nav: true
 nav_order: 6
 ---
-The lab is currently NOT recruiting anyone: interns, undergrads, master's, PhD students, etc. at his moment. Please check back in the future for updates.
+The lab is currently recruiting one PhD Student to work on embodied agents at the intersection of VLMs and RL. Please apply to the UCSD CSE app before Dec 15th. We are not recruiting anyone else at this time - undergrads, Master's, interns, etc.
 
 When positions are available we are interested in recruiting is select topics, particularly students with a strong background in: reinforcement learning, natural language processing, machine learning, and general deep learning engineering.
 
