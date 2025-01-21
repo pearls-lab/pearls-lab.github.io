@@ -3,6 +3,7 @@ github_users:
   - pearls-lab
 
 github_repos:
+  - databricks/Compose-RL
   - allenai/RL4LMs
   - allenai/scienceworld
   - allenai/FineGrainedRLHF
