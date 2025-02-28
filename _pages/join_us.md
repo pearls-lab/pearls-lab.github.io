@@ -6,14 +6,14 @@ description: Info for prospective students
 nav: true
 nav_order: 6
 ---
-The lab is currently recruiting one PhD Student to work on embodied agents at the intersection of VLMs and RL. Please apply to the UCSD CSE app before Dec 15th. We are not recruiting anyone else at this time - undergrads, Master's, interns, etc.
+We are currently NOT recruiting any PhD students, undergrads, Master's, interns, etc.
 
 When positions are available we are interested in recruiting is select topics, particularly students with a strong background in: reinforcement learning, natural language processing, machine learning, and general deep learning engineering.
 
-Please mention "Prithviraj Ammanabrolu" as a potential PI on your [PhD application](https://cse.ucsd.edu/graduate/admissions) to UCSD CSE. 
-It is the only way to ensure that Raj will see your application.
+<!-- Please mention "Prithviraj Ammanabrolu" as a potential PI on your [PhD application](https://cse.ucsd.edu/graduate/admissions) to UCSD CSE. 
+It is the only way to ensure that Raj will see your application. -->
 
-Low-depth choose your own adventure decision tree on if you should email Prithviraj (or Prithvi or Raj, whatever you're comfortable with, really):
+<!-- Low-depth choose your own adventure decision tree on if you should email Prithviraj (or Prithvi or Raj, whatever you're comfortable with, really):
 - Are you a current UCSD Student?
   - Yes: 
     - Are you a PhD Student or an MS/BS student applying to UCSD for PhDs?
@@ -22,7 +22,7 @@ Low-depth choose your own adventure decision tree on if you should email Prithvi
   - No:
     - Are you applying for PhD positions?:
       - Yes: The easist way is to just mention your interest in the Statement of Purpose and drop Prithviraj an email note. A response isn't guaranteed but your application will be read!
-      - No: You can email but there is no guarantee of a reply due to the sheer number of total emails received.
+      - No: You can email but there is no guarantee of a reply due to the sheer number of total emails received. -->
 
 Some resources to help potential PhD applicants:
 - An overview of the [UCSD CSE PhD Program](https://cse.ucsd.edu/graduate/doctoral-programs-computer-science-and-engineering).
