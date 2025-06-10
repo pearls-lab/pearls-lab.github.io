@@ -3,12 +3,12 @@ github_users:
   - pearls-lab
 
 github_repos:
+  - pearls-lab/infini-thor
   - databricks/Compose-RL
   - allenai/RL4LMs
   - allenai/scienceworld
   - allenai/FineGrainedRLHF
   - mosaicml/llm-foundry
-  - mosaicml/composer
   - facebookresearch/ParlAI
   - microsoft/jericho
-  - microsoft/textworld
+  - microsoft/tale-suite
