@@ -32,13 +32,6 @@ profiles:
     more_info: >
       PhD Student
   - align: left
-    name: Isadora "Izzy" White
-    link: https://icwhite.github.io/website/
-    image: izzy.jpg
-    image_circular: true # crops the image to make it circular
-    more_info: >
-      PhD Student
-  - align: left
     name: Christopher Cui
     link: https://christopherzc.github.io/
     image: chris.jpg
