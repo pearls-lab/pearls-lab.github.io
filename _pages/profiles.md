@@ -34,7 +34,7 @@ profiles:
   - align: left
     name: Christopher Z. Cui
     link: https://christopherzc.github.io/
-    image: chris2.jpg
+    image: chris2.jng
     image_circular: true # crops the image to make it circular
     more_info: >
       PhD Student
@@ -56,7 +56,7 @@ profiles:
   - align: left
     name: Lucas Dionisopoulos
     link: https://lucasdino.github.io/index.html
-    image: lucas.png
+    image: lucas.jpeg
     image_circular: true # crops the image to make it circular
     more_info: >
       Master Student
