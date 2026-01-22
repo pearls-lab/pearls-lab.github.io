@@ -32,9 +32,9 @@ profiles:
     more_info: >
       PhD Student
   - align: left
-    name: Christopher Cui (Bidoof)
+    name: Christopher Z. Cui
     link: https://christopherzc.github.io/
-    image: chris.jpg
+    image: chris2.jpg
     image_circular: true # crops the image to make it circular
     more_info: >
       PhD Student
@@ -45,6 +45,21 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
       PhD Student
+  - align: left
+    name: Junli Wang
+    link: https://junliwang.tech/
+    image: junli.png
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      PhD Student
+
+  - align: left
+    name: Lucas Dionisopoulos
+    link: https://lucasdino.github.io/index.html
+    image: lucas.png
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      Master Student
   # - align: right
   #   name: Other Collaborators
   #   link: https://prithvirajva.com/mentees.html
