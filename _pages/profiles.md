@@ -32,7 +32,7 @@ profiles:
     more_info: >
       PhD Student
   - align: left
-    name: Christopher Cui
+    name: Christopher Cui (Bidoof)
     link: https://christopherzc.github.io/
     image: chris.jpg
     image_circular: true # crops the image to make it circular
