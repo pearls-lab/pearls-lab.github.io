@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }}</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter+Tight:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg:        #fbfaf7;
+      --surface:   #ffffff;
+      --ink:       #1a1a1f;
+      --ink-soft:  #3a3a44;
+      --muted:     #6b6b78;
+      --line:      #e7e5df;
+      --accent:      #76B900;
+      --accent-dark: #5a8f00;
+      --accent-glow: rgba(118, 185, 0, 0.35);
+      --accent-2:    #5a8f00;
+      --hero-bg:     #0a0a0a;
+      --hero-fg:   #f5f3ec;
+      --hero-soft: #b4b0a4;
+      --radius:    14px;
+      --maxw:      980px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: var(--accent-dark); text-decoration: none; border-bottom: 1px solid rgba(118,185,0,0.35); transition: border-color .15s ease, color .15s ease; }
+    a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ---------------- Hero ---------------- */
+    .hero {
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(118,185,0,0.18), transparent 60%),
+        radial-gradient(900px 500px at 0% 10%, rgba(118,185,0,0.28), transparent 60%),
+        var(--hero-bg);
+      color: var(--hero-fg);
+      padding: 88px 24px 64px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .hero-inner { max-width: var(--maxw); margin: 0 auto; }
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--hero-soft);
+      margin-bottom: 18px;
+    }
+    .hero-eyebrow .dot {
+      display: inline-block; width: 6px; height: 6px;
+      background: var(--accent-2); border-radius: 50%;
+      margin: 0 10px 2px; vertical-align: middle;
+    }
+    .hero-title {
+      font-family: 'Inter Tight', 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: clamp(34px, 5.2vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin: 0 0 18px;
+    }
+    .hero-subtitle {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(18px, 2.1vw, 22px);
+      color: var(--hero-soft);
+      max-width: 760px;
+      margin: 0 0 28px;
+    }
+    .hero-authors {
+      font-size: 15.5px;
+      color: var(--hero-fg);
+      margin: 0 0 6px;
+    }
+    .hero-authors .me { color: #fff; font-weight: 600; border-bottom: 1px dashed rgba(255,255,255,0.4); }
+    .hero-authors sup.co {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.75em;
+      margin-left: 2px;
+      vertical-align: super;
+    }
+    .hero-authors .equal-contrib {
+      display: inline-block;
+      margin-top: 10px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--hero-soft);
+    }
+    .hero-authors .equal-contrib::first-letter { color: var(--accent); }
+    .hero-affil {
+      font-size: 13.5px;
+      color: var(--hero-soft);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      letter-spacing: 0.02em;
+      margin: 0 0 28px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 16px;
+      background: rgba(255,255,255,0.08);
+      color: var(--hero-fg);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition: background .15s ease, border-color .15s ease, transform .15s ease;
+    }
+    .btn:hover {
+      background: rgba(255,255,255,0.16);
+      border-color: rgba(255,255,255,0.32);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #0a0a0a;
+      font-weight: 700;
+    }
+    .btn-primary:hover { background: #8fd11a; border-color: #8fd11a; color: #0a0a0a; }
+
+    /* ---------------- Content ---------------- */
+    .content {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+    .content h1, .content h2, .content h3 {
+      font-family: 'Inter Tight', 'Inter', sans-serif;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+    .content h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 56px 0 16px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    /* Highlight badge — sits above an h2 to label "Highlight N" */
+    .hl-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #0a0a0a;
+      padding: 7px 14px 7px 10px;
+      border-radius: 6px;
+      box-shadow: 0 4px 18px var(--accent-glow), 0 0 0 1px rgba(118,185,0,0.4) inset;
+      margin-top: 72px;
+      margin-bottom: 0;
+      position: relative;
+      top: 8px;
+    }
+    .hl-badge .num {
+      display: inline-block;
+      background: #0a0a0a;
+      color: var(--accent);
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.06em;
+    }
+    /* When badge precedes h2: drop h2's separator + top space so the badge is the section anchor */
+    .hl-badge + h2 {
+      margin-top: 12px;
+      padding-top: 0;
+      border-top: none;
+      color: var(--ink);
+    }
+    /* Highlighter-marker effect on the section title text after a badge */
+    .hl-badge + h2 .mark {
+      background-image: linear-gradient(120deg, rgba(118,185,0,0.32) 0%, rgba(118,185,0,0.32) 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 42%;
+      background-position: 0 88%;
+      padding: 0 4px;
+    }
+    .content h3 {
+      font-size: 21px;
+      font-weight: 600;
+      margin: 36px 0 10px;
+      color: var(--ink-soft);
+    }
+    .content p { margin: 0 0 18px; }
+    .content strong { color: var(--ink); font-weight: 600; }
+    .content em { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 1.04em; }
+    .content ul { padding-left: 22px; margin: 0 0 22px; }
+    .content li { margin-bottom: 10px; }
+    .content li::marker { color: var(--accent); }
+
+    .content hr {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 48px 0;
+    }
+
+    /* Figures */
+    .content figure, .content .figure-row {
+      margin: 28px 0;
+    }
+    .content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .figure-row {
+      display: grid;
+      gap: 16px;
+    }
+    .figure-row.cols-2 { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 640px) {
+      .figure-row.cols-2 { grid-template-columns: 1fr; }
+    }
+    .caption {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--ink-soft);
+      text-align: left;
+      margin-top: 14px;
+      line-height: 1.62;
+      padding: 14px 18px;
+      background: rgba(118,185,0,0.05);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+    }
+    .caption strong { color: var(--ink); font-weight: 600; }
+    .caption em {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-size: 1.02em;
+      color: var(--ink);
+    }
+
+    /* Pull-quote / highlight callout — visually consistent with the highlight badges */
+    .pullquote {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 1.45;
+      color: var(--ink);
+      background: linear-gradient(180deg, rgba(118,185,0,0.10), rgba(118,185,0,0.04));
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 22px 28px;
+      margin: 40px 0;
+      box-shadow: 0 6px 22px var(--accent-glow), 0 0 0 1px rgba(118,185,0,0.18);
+      position: relative;
+    }
+    .pullquote::before {
+      content: '“';
+      position: absolute;
+      top: -6px;
+      left: 14px;
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 56px;
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.45;
+      font-style: normal;
+    }
+
+    /* Footer */
+    .pagefoot {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 24px 24px 64px;
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-top: 1px solid var(--line);
+    }
+    .pagefoot a { color: var(--muted); border-bottom-color: var(--line); }
+    .pagefoot a:hover { color: var(--accent); }
+
+    ::selection { background: rgba(118,185,0,0.32); }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      {% if page.venue %}{{ page.venue }}<span class="dot"></span>{% endif %}
+      {% if page.year %}{{ page.year }}<span class="dot"></span>{% endif %}
+      {% if page.team %}{{ page.team }}{% endif %}
+    </div>
+
+    <h1 class="hero-title">{{ page.title }}</h1>
+
+    {% if page.subtitle %}<p class="hero-subtitle">{{ page.subtitle }}</p>{% endif %}
+
+    {% if page.authors %}<p class="hero-authors">{{ page.authors }}</p>{% endif %}
+    {% if page.affiliations %}<p class="hero-affil">{{ page.affiliations }}</p>{% endif %}
+
+    <div class="hero-actions">
+      {% if page.paper_url %}<a class="btn btn-primary" href="{{ page.paper_url }}" target="_blank" rel="noopener">📄 Paper</a>{% endif %}
+      {% if page.code_url %}<a class="btn" href="{{ page.code_url }}" target="_blank" rel="noopener">⌘ Code</a>{% endif %}
+      {% if page.video_url %}<a class="btn" href="{{ page.video_url }}" target="_blank" rel="noopener">▶ Video</a>{% endif %}
+      {% if page.bibtex_url %}<a class="btn" href="{{ page.bibtex_url }}" target="_blank" rel="noopener">❝ BibTeX</a>{% endif %}
+      <a class="btn" href="{{ '/projects/' | relative_url }}">← All projects</a>
+    </div>
+  </div>
+</section>
+
+<main class="content">
+  {{ content }}
+</main>
+
+<footer class="pagefoot">
+  <span>© {{ site.time | date: '%Y' }} PEARLS Lab</span>
+  <span><a href="{{ '/' | relative_url }}">pearls-lab.github.io</a></span>
+</footer>
+
+</body>
+</html>
