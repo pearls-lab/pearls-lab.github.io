@@ -120,9 +120,6 @@ paper_url: "https://arxiv.org/pdf/2605.17077"
 }
 </style>
 
-### Dense annotation examples
-
-Each clip compares a sparse task-level label with the richer DeMiAn description produced for the same video — illustrating the additional supervisory signal our method provides.
 
 <div class="video-carousel" id="vc">
   <div class="vc-header">
