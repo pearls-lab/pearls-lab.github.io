@@ -15,24 +15,6 @@ paper_url: "https://arxiv.org/pdf/2605.17077"
 
 <p class="pullquote">Looking for the next big scaling lever for robotics? Language may be the fastest one. 🚀</p>
 
-Teaching robots new skills usually means recording thousands of hours of expensive human-driven robot demos. Each demo is paired with a tiny one-line label like *"open the drawer"* — which throws away most of the useful information already present in the video. We introduce **DeMiAn** (Dense Multi-Aspect Annotation), which keeps the same videos and just rewrites the labels: a vision-language model produces richer descriptions per clip, and a small *instructor* model learns to hand the robot the right kind of description, in real time. With DeMiAn, we achieve **+5 points** success rate on RoboCasa365 and **~62% compute savings** on MolmoSpaces — with **zero new demonstrations collected**.
-
-### Core contributions
-
-- **A new scaling axis for robot learning.** DeMiAn opens one more scaling axis — *language density* — that simply stacks on top of video demonstrations. Applied to 1M+ robot clips and 50K human-egocentric clips for an average **+5** point lift (up to **+37** on a single task), with no additional demonstrations.
-- **A smart instructor and real-time deployment.** No single style of description works best everywhere, so we train a small *instructor* model that watches the initial scene and writes the tailored description for each task on the fly. It runs in parallel with the robot, so the robot never waits.
-- **Better generalization to harder, unseen tasks.** Our policies generalize better to longer multi-step (composite) tasks and to scenes and objects never seen during training; **+9** points on unseen composite tasks.
-- **A more compute-efficient lever for scaling.** Re-labeling existing videos improves the compute–performance frontier of robot learning, even after charging annotation compute into the budget. At 1M-clip scale, DeMiAn matches the no-annotation baseline with **~62% less compute** (~1.3 × 10²⁰ FLOPs saved).
-
-<div class="hl-badge"><span class="num">01</span> Highlight</div>
-
-## <span class="mark">A new scaling axis for robotics</span>
-
-<figure>
-  <img src="{{ '/assets/img/demian/1.png' | relative_url }}" alt="DeMiAn overview" />
-  <div class="caption">DeMiAn shows that richer language can unlock more supervision from the same videos, making annotation density a cheaper and more compute-efficient alternative to collecting more robot data. We scale this idea by re-annotating over 1M robot manipulation videos and 50K egocentric human videos, showing that dense language helps both video-based world-action model and robot-policy training.</div>
-</figure>
-
 <style>
 .video-carousel {
   margin: 32px 0 40px;
@@ -255,6 +237,24 @@ Each clip compares a sparse task-level label with the richer DeMiAn description 
 })();
 </script>
 
+Teaching robots new skills usually means recording thousands of hours of expensive human-driven robot demos. Each demo is paired with a tiny one-line label like *"open the drawer"* — which throws away most of the useful information already present in the video. We introduce **DeMiAn** (Dense Multi-Aspect Annotation), which keeps the same videos and just rewrites the labels: a vision-language model produces richer descriptions per clip, and a small *instructor* model learns to hand the robot the right kind of description, in real time. With DeMiAn, we achieve **+5 points** success rate on RoboCasa365 and **~62% compute savings** on MolmoSpaces — with **zero new demonstrations collected**.
+
+### Core contributions
+
+- **A new scaling axis for robot learning.** DeMiAn opens one more scaling axis — *language density* — that simply stacks on top of video demonstrations. Applied to 1M+ robot clips and 50K human-egocentric clips for an average **+5** point lift (up to **+37** on a single task), with no additional demonstrations.
+- **A smart instructor and real-time deployment.** No single style of description works best everywhere, so we train a small *instructor* model that watches the initial scene and writes the tailored description for each task on the fly. It runs in parallel with the robot, so the robot never waits.
+- **Better generalization to harder, unseen tasks.** Our policies generalize better to longer multi-step (composite) tasks and to scenes and objects never seen during training; **+9** points on unseen composite tasks.
+- **A more compute-efficient lever for scaling.** Re-labeling existing videos improves the compute–performance frontier of robot learning, even after charging annotation compute into the budget. At 1M-clip scale, DeMiAn matches the no-annotation baseline with **~62% less compute** (~1.3 × 10²⁰ FLOPs saved).
+
+<div class="hl-badge"><span class="num">01</span> Highlight</div>
+
+## <span class="mark">A new scaling axis for robotics</span>
+
+<figure>
+  <img src="{{ '/assets/img/demian/1.png' | relative_url }}" alt="DeMiAn overview" />
+  <div class="caption">DeMiAn shows that richer language can unlock more supervision from the same videos, making annotation density a cheaper and more compute-efficient alternative to collecting more robot data. We scale this idea by re-annotating over 1M robot manipulation videos and 50K egocentric human videos, showing that dense language helps both video-based world-action model and robot-policy training.</div>
+</figure>
+
 ### Results on RoboCasa365 and MolmoSpaces
 
 <figure>
@@ -263,13 +263,8 @@ Each clip compares a sparse task-level label with the richer DeMiAn description 
 </figure>
 
 <figure>
-  <img src="{{ '/assets/img/demian/3.png' | relative_url }}" alt="What the robot learns from dense language" />
-  <div class="caption"><strong>What does the robot learn from dense language?</strong> DeMiAn provides a rich signal for learning the grounding of the scene — new interacting-object words (<em>"oven door"</em>), motion verbs not present in the task label (<em>"push"</em>, <em>"retract"</em>), and directional adverbs (<em>"inward"</em>, <em>"away"</em>).</div>
-</figure>
-
-<figure>
   <video src="{{ '/assets/video/demian/comparison_baseline_vs_demian.mp4' | relative_url }}" controls muted playsinline style="width:100%;border-radius:var(--radius);box-shadow:0 1px 2px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.06);border:1px solid var(--line);background:#111;"></video>
-  <div class="caption"><strong>Baseline vs. DeMiAn (side-by-side).</strong> <em>Left:</em> policy trained with sparse task-only labels. <em>Right:</em> policy trained with DeMiAn dense annotations. Richer language supervision leads to more precise, contact-aware manipulation.</div>
+  <div class="caption"><strong>What does the robot learn from dense language?</strong> DeMiAn provides a rich signal for learning the grounding of the scene — new interacting-object words (<em>"oven door"</em>), motion verbs not present in the task label (<em>"push"</em>, <em>"retract"</em>), and directional adverbs (<em>"inward"</em>, <em>"away"</em>).</div>
 </figure>
 
 We found that no fixed annotation rule reaches the per-task oracle. The optimal aspect varies with the structural demands of each task family — contact-changing motion vs. open-vocabulary grounding. Closing this gap requires producing the *right* instruction for each task at deployment.
