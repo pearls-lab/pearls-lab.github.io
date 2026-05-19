@@ -10,7 +10,7 @@ year: 2026
 team: UCSD · NVIDIA
 authors: "<span class='me'>Bosung Kim</span><sup class='co'>★</sup>, <span class='me'>Ruiyi Wang</span><sup class='co'>★</sup>, David Acuna Marrero, Jaehun Jung, Alexander Trevithick, Brandon Cui, Yejin Choi, Prithviraj Ammanabrolu<br><span class='equal-contrib'>★ Equal contribution</span>"
 affiliations: "UCSD PEARLS Lab · NVIDIA Research — LACR & AMRI"
-paper_url: "TODO"
+paper_url: "https://arxiv.org/pdf/2605.17077"
 ---
 
 <p class="pullquote">Looking for the next big scaling lever for robotics? Language may be the fastest one. 🚀</p>
@@ -33,6 +33,230 @@ Teaching robots new skills usually means recording thousands of hours of expensi
   <div class="caption">DeMiAn shows that richer language can unlock more supervision from the same videos, making annotation density a cheaper and more compute-efficient alternative to collecting more robot data. We scale this idea by re-annotating over 1M robot manipulation videos and 50K egocentric human videos, showing that dense language helps both video-based world-action model and robot-policy training.</div>
 </figure>
 
+<style>
+.video-carousel {
+  margin: 32px 0 40px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+}
+.vc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(118,185,0,0.05);
+}
+.vc-title {
+  font-family: 'Inter Tight','Inter',sans-serif;
+  font-weight: 600;
+  font-size: 15.5px;
+  color: var(--ink);
+}
+.vc-counter {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+.vc-stage {
+  position: relative;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vc-video {
+  width: 100%;
+  max-height: 500px;
+  display: block;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: #111;
+}
+.vc-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.52);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s ease, transform .15s ease;
+  padding: 0 0 2px;
+  line-height: 1;
+  user-select: none;
+}
+.vc-btn:hover {
+  background: rgba(118,185,0,0.80);
+  border-color: var(--accent);
+  transform: translateY(-50%) scale(1.10);
+}
+.vc-prev { left: 14px; }
+.vc-next { right: 14px; }
+.vc-caption-area {
+  padding: 14px 20px 12px;
+  border-top: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  background: rgba(118,185,0,0.04);
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.62;
+}
+.vc-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 20px 14px;
+}
+.vc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background .15s ease, transform .15s ease;
+}
+.vc-dot.active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+</style>
+
+### Dense annotation examples
+
+Each clip compares a sparse task-level label with the richer DeMiAn description produced for the same video — illustrating the additional supervisory signal our method provides.
+
+<div class="video-carousel" id="vc">
+  <div class="vc-header">
+    <span class="vc-title" id="vc-title"></span>
+    <span class="vc-counter" id="vc-counter">1 / 10</span>
+  </div>
+  <div class="vc-stage">
+    <button class="vc-btn vc-prev" id="vc-prev" aria-label="Previous example">&#8249;</button>
+    <video class="vc-video" id="vc-video" controls muted playsinline></video>
+    <button class="vc-btn vc-next" id="vc-next" aria-label="Next example">&#8250;</button>
+  </div>
+  <div class="vc-caption-area" id="vc-caption"></div>
+  <div class="vc-dots" id="vc-dots"></div>
+</div>
+
+<script>
+(function () {
+  var BASE = "{{ '/assets/video/demian/' | relative_url }}";
+  var SLIDES = [
+    {
+      file: "example_01_seg001_seal_dough.mp4",
+      title: "Example 1 — Seal Dough",
+      caption: "<strong>Sparse label:</strong> \"seal the dough.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> adds contact-changing motion words — press and fold the dough edges inward, grip firmly, and apply downward pressure along the seam."
+    },
+    {
+      file: "example_02_seg000_adjust_tassel.mp4",
+      title: "Example 2 — Adjust Tassel",
+      caption: "<strong>Sparse label:</strong> \"adjust the tassel.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> describes directional hand movement — reach toward the tassel, pinch lightly, and reposition by pulling upward and to the side."
+    },
+    {
+      file: "example_03_seg018_tie_string.mp4",
+      title: "Example 3 — Tie String",
+      caption: "<strong>Sparse label:</strong> \"tie the string.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> captures the multi-step sequence — cross the two ends, pull snug, loop one end over, and tighten into a secure knot."
+    },
+    {
+      file: "example_04_seg001_sort_beans.mp4",
+      title: "Example 4 — Sort Beans",
+      caption: "<strong>Sparse label:</strong> \"sort the beans.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> specifies properties used for sorting — pick beans by color and size, place into distinct containers to the left and right."
+    },
+    {
+      file: "example_05_seg001_fold_cloth.mp4",
+      title: "Example 5 — Fold Cloth",
+      caption: "<strong>Sparse label:</strong> \"fold the cloth.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> articulates spatial alignment — bring the far edge to meet the near edge, align corners, and press the fold flat with an open palm."
+    },
+    {
+      file: "example_06_seg031_prepare.mp4",
+      title: "Example 6 — Prepare",
+      caption: "<strong>Sparse label:</strong> \"prepare.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> grounds the ambiguous verb — position the workpiece, orient it toward the tool, and secure it before the main action begins."
+    },
+    {
+      file: "example_07_seg000_open_bag.mp4",
+      title: "Example 7 — Open Bag",
+      caption: "<strong>Sparse label:</strong> \"open the bag.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> describes grip and motion — grasp the two sides of the bag's opening and pull both handles outward simultaneously to widen the gap."
+    },
+    {
+      file: "example_08_seg005_open_bottle.mp4",
+      title: "Example 8 — Open Bottle",
+      caption: "<strong>Sparse label:</strong> \"open the bottle.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> captures rotational mechanics — stabilize the bottle body, grip the cap, and rotate counter-clockwise until the seal releases."
+    },
+    {
+      file: "example_09_seg002_open_box.mp4",
+      title: "Example 9 — Open Box",
+      caption: "<strong>Sparse label:</strong> \"open the box.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> articulates panel interaction — locate the lid seam, slide fingers under the lip, and lift the top panel upward and away from the body."
+    },
+    {
+      file: "example_10_seg001_lace_shoe.mp4",
+      title: "Example 10 — Lace Shoe",
+      caption: "<strong>Sparse label:</strong> \"lace the shoe.\" &nbsp;|&nbsp; <strong>DeMiAn:</strong> breaks down the dexterous sequence — thread the lace through each eyelet alternately, cross at the top, and pull both ends to equalize tension."
+    }
+  ];
+
+  var idx = 0;
+  var video   = document.getElementById('vc-video');
+  var titleEl = document.getElementById('vc-title');
+  var counter = document.getElementById('vc-counter');
+  var caption = document.getElementById('vc-caption');
+  var dotsEl  = document.getElementById('vc-dots');
+  var prevBtn = document.getElementById('vc-prev');
+  var nextBtn = document.getElementById('vc-next');
+
+  SLIDES.forEach(function (_, i) {
+    var d = document.createElement('button');
+    d.className = 'vc-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Go to example ' + (i + 1));
+    d.addEventListener('click', function () { go(i); });
+    dotsEl.appendChild(d);
+  });
+
+  function go(n) {
+    video.pause();
+    idx = (n + SLIDES.length) % SLIDES.length;
+    var s = SLIDES[idx];
+    video.src = BASE + s.file;
+    video.load();
+    titleEl.textContent = s.title;
+    counter.textContent = (idx + 1) + ' / ' + SLIDES.length;
+    caption.innerHTML = s.caption;
+    dotsEl.querySelectorAll('.vc-dot').forEach(function (d, i) {
+      d.classList.toggle('active', i === idx);
+    });
+  }
+
+  prevBtn.addEventListener('click', function () { go(idx - 1); });
+  nextBtn.addEventListener('click', function () { go(idx + 1); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  go(idx - 1);
+    if (e.key === 'ArrowRight') go(idx + 1);
+  });
+
+  go(0);
+})();
+</script>
+
+### Results on RoboCasa365 and MolmoSpaces
+
 <figure>
   <img src="{{ '/assets/img/demian/2.png' | relative_url }}" alt="Per-task results on RoboCasa365 and MolmoSpaces" />
   <div class="caption">On RoboCasa365 with DeMiAn-VLA, <em>"Physical Motion"</em> annotation delivers large per-task lifts over the task-only baseline: <em>SlideDishwasherRack</em> (<strong>+37</strong>), <em>CoffeeSetupMug</em> (<strong>+31</strong>), <em>CloseToasterOvenDoor</em> (<strong>+14</strong>). On MolmoSpaces, <em>"Scene Composition"</em> adds <strong>+13</strong> on <em>Pick</em> tasks; <em>"Reasoning"</em> adds <strong>+8</strong> on <em>NextTo</em>.</div>
@@ -41,6 +265,11 @@ Teaching robots new skills usually means recording thousands of hours of expensi
 <figure>
   <img src="{{ '/assets/img/demian/3.png' | relative_url }}" alt="What the robot learns from dense language" />
   <div class="caption"><strong>What does the robot learn from dense language?</strong> DeMiAn provides a rich signal for learning the grounding of the scene — new interacting-object words (<em>"oven door"</em>), motion verbs not present in the task label (<em>"push"</em>, <em>"retract"</em>), and directional adverbs (<em>"inward"</em>, <em>"away"</em>).</div>
+</figure>
+
+<figure>
+  <video src="{{ '/assets/video/demian/comparison_baseline_vs_demian.mp4' | relative_url }}" controls muted playsinline style="width:100%;border-radius:var(--radius);box-shadow:0 1px 2px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.06);border:1px solid var(--line);background:#111;"></video>
+  <div class="caption"><strong>Baseline vs. DeMiAn (side-by-side).</strong> <em>Left:</em> policy trained with sparse task-only labels. <em>Right:</em> policy trained with DeMiAn dense annotations. Richer language supervision leads to more precise, contact-aware manipulation.</div>
 </figure>
 
 We found that no fixed annotation rule reaches the per-task oracle. The optimal aspect varies with the structural demands of each task family — contact-changing motion vs. open-vocabulary grounding. Closing this gap requires producing the *right* instruction for each task at deployment.
