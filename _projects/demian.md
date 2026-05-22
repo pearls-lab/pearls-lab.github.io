@@ -8,7 +8,7 @@ category: World Modeling Embodied Agents
 venue: Preprint
 year: 2026
 team: UCSD · NVIDIA
-authors: "<span class='me'>Bosung Kim</span><sup class='co'>★</sup>, <span class='me'>Ruiyi Wang</span><sup class='co'>★</sup>, David Acuna Marrero, Jaehun Jung, Alexander Trevithick, Brandon Cui, Yejin Choi, Prithviraj Ammanabrolu<br><span class='equal-contrib'>★ Equal contribution</span>"
+authors: "<span class='me'>Bosung Kim</span><sup class='co'>★</sup>, <span class='me'>Ruiyi Wang</span><sup class='co'>★</sup>, David Acuna, Jaehun Jung, Alexander Trevithick, Brandon Cui, Yejin Choi, Prithviraj Ammanabrolu<br><span class='equal-contrib'>★ Equal contribution</span>"
 affiliations: "UCSD PEARLS Lab · NVIDIA Research — LACR & AMRI"
 paper_url: "https://arxiv.org/pdf/2605.17077"
 ---
