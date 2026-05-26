@@ -273,8 +273,8 @@ display_categories: ['blockquotes'] # these categories will be displayed on the 
 
 scholar:
 
-  last_name: [Ammanabrolu]
-  first_name: [Prithviraj, P., P.V.]
+  last_name: [Ammanabrolu, Cui]
+  first_name: [Prithviraj, P., P.V., Christopher, C., C.Z.]
 
   style: apa
   locale: en
