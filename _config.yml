@@ -377,11 +377,18 @@ enable_progressbar:         true   # enables a horizontal progress bar linked to
 
 bootstrap-table:
   version: "1.22.1"
+  integrity:
+    css: "sha256-7Oajx7nIkYTg7DngGkbQPeZYOGF2y0Q3R24+vhzH/2M="
+    js: "sha256-lbFlaLNwCuK7kAmwDyvE47sfL7Qd8Jz1w8ubDRQKgag="
+imagesloaded:
+  version: "4.1.4"
+  integrity: "sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q="
 jquery:
   version: "3.6.0"
   integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 mathjax:
   version: "3.2.0"
+  integrity: "sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="
 masonry:
   version: "4.2.2"
   integrity: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="

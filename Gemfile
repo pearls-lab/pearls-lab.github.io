@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# stdlib gems removed from Ruby's default gems in 3.5+; required by jekyll plugins
+gem 'ostruct'
 group :jekyll_plugins do
     gem 'classifier-reborn'
     gem 'jekyll'
